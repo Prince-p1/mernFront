@@ -17,7 +17,7 @@ let navigate = useNavigate()
       })
     );
     try {
-      const response = await fetch("https://mernback-6.onrender.comapi/loginuser", {
+      const response = await fetch("https://mernback-6.onrender.com/api/loginuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

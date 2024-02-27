@@ -18,7 +18,7 @@ export default function Signup() {
     }),);
     console.log()
     try {
-      const response = await fetch("https://mernback-6.onrender.comapi/creatuser", {
+      const response = await fetch("https://mernback-6.onrender.com/api/creatuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
