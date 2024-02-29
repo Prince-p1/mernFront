@@ -66,7 +66,7 @@ export default function Card(props) {
 
   return (
     <div>
-      <div className="card mt-3" style={{ width: "18rem", maxHeight: "360px" }}>
+      <div className="card mt-3" style={{ width: "16rem", maxHeight: "360px" }}>
         <img
           src={props.foodItem.img}
           alt="......"
@@ -74,9 +74,9 @@ export default function Card(props) {
         />
         <div className="card-body">
           <h5 className="card-title">{props.foodItem.name}</h5>
-          <div className="container w-100">
+          <div className="container w-100 p-0" style={{height:"38px"}}>
             <select
-              className="m-2 h-100  bg-success rounded"
+              className="m-15 h-100 w-20  bg-success rounded"
               onChange={(e) => setQty(e.target.value)}
             >
               {Array.from(Array(6), (e, i) => (
@@ -87,7 +87,7 @@ export default function Card(props) {
             </select>
             {priceOptions.length > 0 && (
               <select
-                className="m-2 h-100  bg-success rounded"
+                className="m-15 h-100 w-20  bg-success rounded"
                 ref={priceRef}
                 onChange={(e) => setSize(e.target.value)}
               >
@@ -101,7 +101,7 @@ export default function Card(props) {
                 })}
               </select>
             )}
-            <div className="d-inline h-100 fs-6">₹{finalPrice}/- </div>
+            <div className="d-inline ms-2 h-100 w-20">₹{finalPrice}/- </div>
           </div>
           <hr />
           <button
